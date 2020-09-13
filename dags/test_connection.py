@@ -81,6 +81,7 @@ def upload_file_to_S3(**kwargs):
     filename = kwargs.get('filename')
     s3_target = kwargs.get('s3_target')
     s3.upload_file(filename, bucket_name, s3_target + filename)
+    x = 1
 
 # #------------------------------------------------------------------------------------------#
 # #  DAG
