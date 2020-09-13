@@ -4,3 +4,6 @@ pytest-helpers-namespace~=2019.1.8
 pytest-mock~=3.2.0
 pytest~=5.4.3
 pytest-docker-tools~=0.2.2
+pandas
+requests
+boto3
