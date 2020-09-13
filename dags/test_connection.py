@@ -109,12 +109,12 @@ with DAG('test_connection',
         python_callable=test_connection_prod,
         provide_context=True
     )
-    test_connection_stg = PythonOperator(
-        task_id='test_connection_stg',
-        op_kwargs = {'conn_id':connection_stg},
-        python_callable=test_connection_stg,
-        provide_context=True
-    )
+    # test_connection_stg = PythonOperator(
+    #     task_id='test_connection_stg',
+    #     op_kwargs = {'conn_id':connection_stg},
+    #     python_callable=test_connection_stg,
+    #     provide_context=True
+    # )
     test_s3_creds = PythonOperator(
         task_id='test_s3_creds',
         python_callable=test_s3_creds,
