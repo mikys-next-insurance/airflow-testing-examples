@@ -136,5 +136,5 @@ with DAG('test_connection',
     )
 
 start_task >> test_s3_creds>> upload_to_S3_task
-start_task >> test_connection_prod >> test_connection_stg
+start_task >> test_connection_prod
 start_task >> slack_task
