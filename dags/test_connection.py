@@ -73,9 +73,9 @@ def upload_file_to_S3(**kwargs):
     os.chdir(dir_path)
     print(dir_path)
     session = boto3.Session()
-    credentials = session.get_credentials()
-    access_key = credentials.access_key
-    secret_key = credentials.secret_key
+    aws_creds = S3Hook(aws_conn_id='aws_default', verify=None).get_credentials()
+    access_key = aws_creds.access_key
+    secret_key = aws_creds.secret_key
     print( access_key+'| |'+secret_key)
     bucket_name = kwargs.get('bucket_name')
     filename = kwargs.get('filename')
